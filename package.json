@@ -1,36 +1,40 @@
 {
-  "name": "electron-react-ts-express",
-  "version": "1.0.0",
-  "main": "./dist/main.js",
-  "scripts": {
-    "dev:electron": "cross-env NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
-    "dev:express": "cross-env NODE_ENV=development webpack --config webpack.express.config.js --mode development",
+	"name": "electron-react-ts-express",
+	"version": "1.0.0",
+	"main": "./dist/main.js",
+	"scripts": {
+		"dev:electron": "cross-env NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
 		"dev:react": "cross-env NODE_ENV=development webpack serve --config webpack.react.config.js --mode development",
+		"build:electron": "cross-env NODE_ENV=production webpack --config webpack.electron.config.js --mode production",
+		"build:react": "cross-env NODE_ENV=production webpack --config webpack.react.config.js --mode production",
+		"build": "rimraf dist && yarn build:electron && yarn build:react",
 		"lint": "xo",
-    "test": "yarn lint"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/preset-react": "^7.12.5",
-    "@babel/preset-typescript": "^7.12.1",
-    "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "electron": "^10.1.5",
-    "express": "^4.17.1",
-    "html-webpack-plugin": "^4.5.0",
-    "webpack": "^4.0.0",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0",
-    "xo": "^0.34.2"
-  },
-  "dependencies": {
-    "@types/react": "^16.9.55",
-    "@types/react-dom": "^16.9.9",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
+		"test": "yarn lint"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.12.3",
+		"@babel/preset-env": "^7.12.1",
+		"@babel/preset-react": "^7.12.5",
+		"@babel/preset-typescript": "^7.12.1",
+		"babel-loader": "^8.1.0",
+		"cross-env": "^7.0.2",
+		"css-loader": "^5.0.1",
+		"electron": "^10.1.5",
+		"html-webpack-plugin": "^4.5.0",
+		"rimraf": "^3.0.2",
+		"style-loader": "^2.0.0",
+		"webpack": "^4.0.0",
+		"webpack-cli": "^4.1.0",
+		"webpack-dev-server": "^3.11.0",
+		"xo": "^0.34.2"
+	},
+	"dependencies": {
+		"@types/react": "^16.9.55",
+		"@types/react-dom": "^16.9.9",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1"
+	},
 	"homepage": ".",
 	"xo": {
 		"envs": [

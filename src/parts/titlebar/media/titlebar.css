@@ -1,0 +1,131 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 11px;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+
+  .windows {
+	font-family: Segoe WPC,Segoe UI,sans-serif;
+  }
+
+  .window-grid-view {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+  }
+
+  .window-view-container {
+	width: 100%;
+	height: 100%;
+	white-space: nowrap;
+	position: relative;
+  }
+
+  .window-view-container>.window-grid-view {
+	white-space: normal;
+	position: absolute;
+  }
+
+  .grid-view-view {
+	width: 100%;
+	white-space: normal;
+	position: absolute;
+  }
+
+  .part.titlebar {
+	padding: 0;
+	line-height: 30px;
+	justify-content: left;
+	overflow: visible;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	align-items: center;
+	-webkit-user-select: none;
+	zoom: 1;
+	display: flex;
+  }
+
+  .titlebar-drag-region {
+	top: 0;
+	left: 0;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-app-region: drag;
+  }
+
+  .part.titlebar>.window-appicon {
+		width: 35px;
+	  height: 100%;
+	  position: relative;
+	  z-index: 3000;
+	  background-image: none;
+	  background-repeat: no-repeat;
+	  background-position: 50%;
+	  background-size: 16px;
+	  flex-shrink: 0;
+	  -webkit-app-region: 'drag';
+  }
+
+  .part.titlebar>.menubar {
+	z-index: 2500;
+  }
+
+  .menubar {
+	display: flex;
+	flex-shrink: 1;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-wrap: wrap;
+  }
+
+  .part.titlebar>.window-title {
+	flex: 0 1 auto;
+	  font-size: 12px;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	  margin-left: auto;
+	  margin-right: auto;
+	  zoom: 1;
+  }
+
+  .part.titlebar>.window-controls-container {
+		display: flex;
+	  flex-grow: 0;
+	  flex-shrink: 0;
+	  text-align: center;
+	  position: relative;
+	  z-index: 3000;
+	  -webkit-app-region: no-drag;
+	  height: 100%;
+	  width: 138px;
+	  margin-left: auto;
+  }
+
+  .window-controls-container>.window-icon {
+	  display: inline-block;
+	  line-height: 30px;
+	  height: 100%;
+	  width: 46px;
+	  font-size: 16px;
+  }
+
+  .part.titlebar > .window-controls-container .window-icon {
+	  color: #cccccc;
+  }
+
+  .resizer {
+	-webkit-app-region: no-drag;
+	position: absolute;
+	top: 0;
+	height: 4px;
+	width: 100%;
+  }

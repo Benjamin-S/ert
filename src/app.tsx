@@ -1,15 +1,12 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-
-const mainElement = document.createElement('div');
-document.body.append(mainElement);
+import Titlebar from './parts/titlebar/titlebar';
 
 const App = () => {
 	return (
-		<div>
-			<h1>React Rendering</h1>);
+		<div className="Windows" style={{top: '0px', right: '0px', bottom: '0px', left: '0px', position: 'relative', width: '100%', height: '300px'}}>
+			<Titlebar/>
 		</div>
 	);
 };
 
-ReactDom.render(<App />, mainElement);
+export default App;
